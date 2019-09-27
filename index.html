@@ -3,6 +3,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15/dist/smooth-scroll.polyfills.min.js"></script>
     <style>
         body {
             background: #FF40B4;
@@ -8056,7 +8057,7 @@
     </header>
     <main>
         <section>
-            <a href="#sessions">go to widget</a>
+            <a data-scroll href="#sessions">go to widget</a>
             What is Lorem Ipsum?
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
             industry's
@@ -8224,6 +8225,9 @@
             Lorem Ipsum.
         </section>
     </main>
+    <script>
+        var scroll = new SmoothScroll('a[href*="#"]',{speed:700,header:"header"})
+    </script>
 </body>
 
 </html>
