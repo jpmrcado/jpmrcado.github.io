@@ -7458,6 +7458,12 @@
             display: block
         }
 
+        #event-info {
+            background: #fff;
+            border-radius: 20px;
+            padding: 4em 2em;
+        }
+
         #pagination .tab.disabled {
             background-color: #fff;
             pointer-events: none
@@ -8056,7 +8062,7 @@
         </div>
     </header>
     <main>
-        <section>
+        <section id="event-info">
             <a data-scroll href="#sessions">go to widget</a>
             What is Lorem Ipsum?
             Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -8226,7 +8232,7 @@
         </section>
     </main>
     <script>
-        var scroll = new SmoothScroll('a[href*="#"]',{speed:700,header:"header"})
+        var scroll = new SmoothScroll('a[href*="#"]', { speed: 700, header: "header" })
     </script>
 </body>
 
