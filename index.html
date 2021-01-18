@@ -1,8 +1,14 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <style>
+    html {
+      height: -webkit-fill-available;
+    }
+
     body {
       margin: 0;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
     }
 
     * {
@@ -11,16 +17,20 @@
 
     .parent {
       background-color: rebeccapurple;
-      display: grid;
-      grid-template-rows: auto 1fr;
+      /* display: grid;
+      grid-template-rows: auto 1fr; */
+
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      max-height: 100vh;
     }
 
     .header {
       background-color: transparent;
       border: 2px solid black;
       z-index: 3;
-      position:sticky;
-      top: 0;
+      position: relative;
     }
 
     .content {
