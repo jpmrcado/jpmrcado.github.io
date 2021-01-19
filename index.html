@@ -7,6 +7,9 @@
 
     body {
       margin: 0;
+
+      /* min-height: 100vh;
+      min-height: -webkit-fill-available; */
     }
 
     * {
@@ -20,14 +23,16 @@
 
       display: flex;
       flex-direction: column;
-      min-height: -webkit-fill-available;
+      height: 100vh;
     }
 
     .header {
       background-color: transparent;
       border: 2px solid black;
       z-index: 3;
-      position: relative;
+      position: fixed;
+      top: 0;
+      width: 100%;
     }
 
     .content {
@@ -35,7 +40,11 @@
       overflow: auto;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      
+      position:fixed;
+      top: 68px;
+      bottom: 0;
+      width: 100%;
     }
   </style>
 </head>
@@ -131,4 +140,14 @@
       consequatur aut perferendis doloribus asperiores repellat."
     </div>
   </div>
+  <script>
+    function resetHeight() {
+      // reset the body height to that of the inner browser
+      document.body.style.height = window.innerHeight + "px";
+    }
+    // reset the height whenever the window's resized
+    window.addEventListener("resize", resetHeight);
+    // called to initially set the height.
+    resetHeight();
+  </script>
 </body>
