@@ -30,9 +30,10 @@
       background-color: transparent;
       border: 2px solid black;
       z-index: 3;
-      position: fixed;
+
+      /* position: fixed;
       top: 0;
-      width: 100%;
+      width: 100%; */
     }
 
     .content {
@@ -41,10 +42,10 @@
       display: flex;
       flex-direction: column;
       
-      position:fixed;
+      /* position:fixed;
       top: 68px;
       bottom: 0;
-      width: 100%;
+      width: 100%; */
     }
   </style>
 </head>
@@ -143,7 +144,9 @@
   <script>
     function resetHeight() {
       // reset the body height to that of the inner browser
+      
       document.body.style.height = window.innerHeight + "px";
+      alert(document.body.style.height);
     }
     // reset the height whenever the window's resized
     window.addEventListener("resize", resetHeight);
